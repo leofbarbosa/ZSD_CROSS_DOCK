@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/sap/ZSD_CROSS_DOCK_PROCESS_SRV/$metadata">
+        <edmx:Include Namespace="ZSD_CROSS_DOCK_PROCESS_SRV" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="ZSD_CROSS_DOCK_PROCESS_SRV.ZC_SD_CROSSDOCKType">
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>vbeln</PropertyPath>
+						<PropertyPath>POSNR</PropertyPath>
+						<PropertyPath>EBELN</PropertyPath>
+						<PropertyPath>EBELP</PropertyPath>
+					</Collection>
+				</Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@vbeln}"/>
+                            <PropertyValue Property="Value" Path="vbeln"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@kunnr}"/>
+                            <PropertyValue Property="Value" Path="kunnr"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@name1}"/>
+                            <PropertyValue Property="Value" Path="name1"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@vdatu}"/>
+                            <PropertyValue Property="Value" Path="vdatu"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@bstnk}"/>
+                            <PropertyValue Property="Value" Path="bstnk"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@matnr}"/>
+                            <PropertyValue Property="Value" Path="matnr"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@arktx}"/>
+                            <PropertyValue Property="Value" Path="arktx"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@kwmeng}"/>
+                            <PropertyValue Property="Value" Path="kwmeng"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@werks}"/>
+                            <PropertyValue Property="Value" Path="werks"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@vbeln_del_itm}"/>
+                            <PropertyValue Property="Value" Path="vbeln_del_itm"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@werks_del_itm}"/>
+                            <PropertyValue Property="Value" Path="werks_del_itm"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@abgru}"/>
+                            <PropertyValue Property="Value" Path="abgru"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@vbeln_del}"/>
+                            <PropertyValue Property="Value" Path="vbeln_del"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@lprio}"/>
+                            <PropertyValue Property="Value" Path="lprio"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+						</Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="{@i18n&gt;@ebelp}"/>
+                            <PropertyValue Property="Value" Path="ebelp"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> 
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <!-- SMART FILTER BAR -->
+
+
+            
+			<!-- SEARCH HELPERS -->
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZSD_CROSS_DOCK_PROCESS_SRV.ZC_SD_CROSSDOCKType/vbeln">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="{@i18n&gt;@vbeln}"/>
+						<PropertyValue Property="CollectionPath" String="ZC_SD_CDOCK_SOVH"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty" PropertyPath="vbeln"/>
+									<PropertyValue Property="ValueListProperty" String="vbeln"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZSD_CROSS_DOCK_PROCESS_SRV.ZC_SD_CROSSDOCKType/EBELN">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="{@i18n&gt;@vbeln}"/>
+						<PropertyValue Property="CollectionPath" String="ZC_SD_CDOCK_POVH"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty" PropertyPath="EBELN"/>
+									<PropertyValue Property="ValueListProperty" String="EBELN"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+ 			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZSD_CROSS_DOCK_PROCESS_SRV.ZC_SD_CROSSDOCKType/kunnr">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="{@i18n&gt;@kunnr}"/>
+						<PropertyValue Property="CollectionPath" String="C_SoldToValueHelp"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty" PropertyPath="kunnr"/>
+									<PropertyValue Property="ValueListProperty" String="Customer"/>
+								</Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="CustomerName"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZSD_CROSS_DOCK_PROCESS_SRV.ZC_SD_CROSSDOCKType/matnr">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="{@i18n&gt;@matnr}"/>
+						<PropertyValue Property="CollectionPath" String="I_Material"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty" PropertyPath="matnr"/>
+									<PropertyValue Property="ValueListProperty" String="Material"/>
+								</Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="Material_Text"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZSD_CROSS_DOCK_PROCESS_SRV.ZC_SD_CROSSDOCKType/werks">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="{@i18n&gt;@werks_lbl}"/>
+						<PropertyValue Property="CollectionPath" String="C_Plantvaluehelp"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty" PropertyPath="werks"/>
+									<PropertyValue Property="ValueListProperty" String="Plant"/>
+								</Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="PlantName"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZSD_CROSS_DOCK_PROCESS_SRV.ZC_SD_CROSSDOCKType/werks_del_itm">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="{@i18n&gt;@werks_del_itm_lbl}"/>
+						<PropertyValue Property="CollectionPath" String="C_Plantvaluehelp"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty" PropertyPath="werks_del_itm"/>
+									<PropertyValue Property="ValueListProperty" String="Plant"/>
+								</Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="PlantName"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
